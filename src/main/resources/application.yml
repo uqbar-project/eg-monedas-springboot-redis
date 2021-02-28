@@ -1,7 +1,6 @@
 spring:
   redis:
-    mongodb:
-      database: 0
-      host: localhost
-      port: 6379
-      timeout: 50000
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 50000
