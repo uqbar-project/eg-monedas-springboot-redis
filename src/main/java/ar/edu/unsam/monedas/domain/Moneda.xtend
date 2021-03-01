@@ -2,6 +2,7 @@ package ar.edu.unsam.monedas.domain
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.math.BigDecimal
+import java.math.RoundingMode
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.springframework.data.annotation.Id
 import org.springframework.data.redis.core.RedisHash
@@ -18,11 +19,13 @@ class Moneda {
 	String descripcion
 	
 	def convertirAPesos(BigDecimal unValor) {
-		unValor * cotizacionMoneda
+		(unValor * cotizacionMoneda) => [
+			scale = 2
+		]
 	}
 	
 	def convertirDePesosAMoneda(BigDecimal unValor) {
-		unValor / cotizacionMoneda
+		unValor.divide(cotizacionMoneda, 2, RoundingMode.HALF_UP).toString
 	}
 		
 	def getCotizacionDeMoneda() {

@@ -100,5 +100,6 @@ La conversión es un objeto que sirve para capturar los parámetros necesarios p
 
 ### Testeo de integración
 
-TODO
+Podés ver cómo se testean en forma completa los endpoints que convierten de peos a una moneda y viceversa.
+
 
