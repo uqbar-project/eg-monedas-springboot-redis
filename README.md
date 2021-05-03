@@ -34,14 +34,14 @@ Y nos podemos conectar a cualquier cliente Redis al host 127.0.0.1, puerto 6379.
 
 ## Carga de datos iniciales
 
-Para ejecutar el script que carga los datos iniciales, tenés que ejecutar el script que está en Node (asumimos que ya lo tenés instalado):
+Para cargar los datos iniciales, tenés que ejecutar el script que está en Node (asumimos que ya lo tenés instalado):
 
 ```bash
 cd datosInicialesNode
 node cargaDatosInicial.js 
 ```
 
-Eso te permitirá cargar valores para monedas como euro, dólar y peso y visualizarlas en algún cliente Redis como Redis Commander.
+Eso te permitirá crear las claves para monedas como euro, dólar y peso y visualizarlas en algún cliente como [Redis Commander](https://github.com/joeferner/redis-commander).
 
 ![Redis Commander](./images/redisCommander.gif)
 
